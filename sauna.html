@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rantasauna</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sauna.css" />
 </head>
 <body>
   <header class="site-header">
@@ -19,6 +20,8 @@
     </nav>
   </header>
   <main>
+     <!-- Tekstiosio -->
+    <div class="content">
     <h1>Rantasauna</h1>
     <p>Idyllisellä paikalla Jäälinjärven rannalla sijaitseva vanha rantasauna tarjoaa 
     ainutlaatuisen saunakokemuksen. Sauna on peruskorjattu kauttaaltaan niin, että se 
@@ -38,9 +41,46 @@
     
     <p>Saunalta johtaa laituri Jäälinjärveen, jonka vesi on laadultaan erinomainen uimiseen. 
     Saunapolun varrella on nuotiopaikka.</p>
+    </div>
+    <div style="text-align:left">
+      <h2>Kuvagalleria</h2>
+      <p>Suurenna kuva klikkaamalla sitä.</p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="row">
+      <div class="column">
+        <img src="images/sauna1.jpg" alt="Saarinen1" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="images/sauna2.jpg" alt="Saarinen2" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="images/sauna_pohja.jpg" alt="Pohjakuva" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+    </script>
   </main>
+
   <footer>
     <img src="images/Logo.jpg" alt="Yhdistyksen logo">
-  </footer>
+  </footer>  
 </body>
 </html>
