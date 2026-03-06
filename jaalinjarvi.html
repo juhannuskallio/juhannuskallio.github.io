@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jäälinjärvi-sali</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery.css" />
+
 </head>
 <body>
   <header class="site-header">
@@ -12,13 +14,15 @@
       <img src="images/Maja_pieni.jpg" alt="" class="header-logo">
     <nav class="main-nav">
       <ul>
-        <li><a href="index.html">Etusivu</a></li>
+        <li><a href="index.html">Koti</a></li>
+        <li><a href="jaalinjarvi.html">Jäälinjärvi-sali</a></li>
         <li><a href="sauna.html">Rantasauna</a></li>
         <li><a href="hinnasto.html">Hinnasto</a></li>
       </ul>
     </nav>
   </header>
   <main>
+    <!-- Tekstiosio -->
     <h1>Jäälinjärvi-sali</h1>
     <p>Jäälinmajan juhla- ja kokoustila <i>Jäälinjärvi-sali</i> soveltuu monenlaiseen juhla- ja kokouskäyttöön.
     Salista avautuu upea näkymä Jäälinjärvelle. Piha-alue ja sen ympäristö on häiriötön. 
@@ -31,7 +35,43 @@
     <p>Ruoat ja juomat voit hankkia joko itse tai tilata pitopalvelulta. Käytettävissä on 
     lämmityskeittiö ja kylmätilaa. Ilman lisähintaa voit valmistella salin juhlapäivää 
     edeltävänä iltana ja siivota vasta seuraavana aamuna.</p>
-    
+
+    <!-- Gallery -->
+    <div style="text-align:left">
+      <h2>Kuvagalleria</h2>
+      <p>Suurenna kuva klikkaamalla sitä.</p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="row">
+      <div class="column">
+        <img src="images/sauna1.jpg" alt="Saarinen1" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="images/sauna2.jpg" alt="Saarinen2" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="images/sauna_pohja.jpg" alt="Pohjakuva" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+    </script>
   </main>
   <footer>
     <img src="images/Logo.jpg" alt="Yhdistyksen logo">
