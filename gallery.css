@@ -12,7 +12,7 @@ body {
 /* The grid: Four equal columns that floats next to each other */
 .column {
   float: left;
-  width: 31%;
+  width: 22%;
   padding: 10px;
 }
 
@@ -42,9 +42,9 @@ body {
 /* Expanding image text */
 #imgtext {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 15px;
-  color: black;
+  color: DarkGreen;
   font-size: 20px;
 }
 
