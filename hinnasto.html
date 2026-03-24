@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hinnasto</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Varauskalenterien ja varauslinkin CSS --> 
   <style>
     .my-button {
     display: inline-block;
@@ -24,6 +25,22 @@
 
     .my-button:active {
       transform: scale(0.98);
+    }
+    
+    .calendar-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    height: 0;
+    }
+
+    .calendar-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 0;
     }
   </style>
 </head>
@@ -82,8 +99,28 @@ tai on sovittu laskutuksesta.</li>
     <li>Kaikki ehdot tulevat voimaan, kun tilaus on molemmin puolin dokumentoitu
 esim. sähköpostilla tai muulla todennettavalla tavalla.</li>
   </ul>
-  
-  <!-- Tekstiosio 
+  <!-- Varaustilanne --> 
+  <h1>Varaustilanne</h1>
+  <h2>Jäälinjärvi-sali</h2>
+  <div class="calendar-wrapper">
+    <iframe 
+      src="https://calendar.google.com/calendar/embed?src=jaalinmajary%40gmail.com&ctz=Europe%2FHelsinki" 
+      style="border:0"
+      frameborder="0" 
+      scrolling="no">
+    </iframe>
+  </div>
+
+  <h2>Sauna</h2> 
+  <div class="calendar-wrapper">
+    <iframe 
+      src="https://calendar.google.com/calendar/embed?src=f6ce41a7bb1f68d9dfe99070a2ea7ac9a1fed712a1f31b406fa00f3a0870d261%40group.calendar.google.com&ctz=Europe%2FHelsinki"
+      style="border:0"
+      frameborder="0" 
+      scrolling="no">
+    </iframe>
+  </div>
+  <!-- Varauslinkki 
   <a href="https://kiiminginjaalinvedet.fi" class="my-button" target="_blank" rel="noopener">
   Siirry varaamaan!
   </a>
